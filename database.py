@@ -44,6 +44,7 @@ def create_table_library():
     with DatabaseContextManager("db") as db:
         db.execute(query)
 
+
 # ------------------------CRUD------------------------
 # CRUD stands for Create, Read, Update, Delete
 # Create or in SQL INSERT is used to create new records in the database.
