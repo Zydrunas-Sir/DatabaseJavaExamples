@@ -55,7 +55,7 @@ def create_table_companies():
         db.execute(query)
 
 
-def create_campanies(company_name: str, employee_count: int, average_salary: float):
+def create_companies(company_name: str, employee_count: int, average_salary: float):
     query = """INSERT INTO Companies(company_name, employee_count, average_salary) VALUES(?,?,?)"""
     parameters = [company_name, employee_count, average_salary]
     with DatabaseContextManager("db") as db:
@@ -76,6 +76,3 @@ def drop_table():
     query = """DROP TABLE Customer"""
     with DatabaseContextManager("db") as db:
         db.execute(query)
-
-
-get_customer_companies()
